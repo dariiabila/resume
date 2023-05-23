@@ -10,11 +10,13 @@
 
         <div>
             <h3>Known for:</h3>
-            {{#each known_for}}
+
             <ul>
+                {{#each known_for}}
                 <li>{{this}}</li>
+                {{/each}}
             </ul>
-            {{/each}}
+
         </div>
 
         <div>
@@ -28,21 +30,25 @@
         </div>
         <div>
             <h4>Notable publications</h4>
-            {{#each notable_publications}}
+
             <ul>
+                {{#each notable_publications}}
                 <li>{{title}}, {{year}}, {{publisher}}</li>
+                {{/each}}
             </ul>
-            {{/each}}
+
         </div>
 
         <div>
             <h4>Partners:</h4>
-            {{#each partners}}
+
             <ul>
+                {{#each partners}}
                 <li>{{name}} {{relationship}} </li>
                 <li>{{years}}</li>
+                {{/each}}
             </ul>
-            {{/each}}
+
         </div>
         <hr>
         <div>
@@ -54,21 +60,25 @@
         </div>
         <div>
             <h4>Influenced: </h4>
-            {{#each influenced}}
+
             <ul>
+                {{#each influenced}}
                 <li>{{this}}</li>
+                {{/each}}
             </ul>
-            {{/each}}
+
         </div>
         <div>
             <p><b>Quotes:</b></p>
-            {{#each quotes}}
+
             <ul>
+                {{#each quotes}}
                 <li>
                     <cite><em>{{this}}</em></cite>
                 </li>
+                {{/each}}
             </ul>
-            {{/each}}
+
         </div>
         <hr>
         <div>
