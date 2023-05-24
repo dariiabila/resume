@@ -1,0 +1,87 @@
+<div>
+  <main>
+    <h1>{{name}}</h1>
+    <dfn>{{description}}</dfn>
+    <p><strong>Price:</strong> {{price}}</p>
+    <p>Category: {{category}}</p>
+    <hr>
+    <section>
+      <h2>Features:</h2>
+      {{#with features}}
+      <p>Processor:</p>
+      <ul>
+        {{#each processor}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+      </ul>
+      <hr>
+      <p>Memory:</p>
+      <ul>
+        {{#each memory}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+      </ul>
+      <hr>
+      <p>Storage:</p>
+      <ul>
+        {{#each storage}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+      </ul>
+      <hr>
+      <p>Display:</p>
+      <ul>
+        {{#each display}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+      </ul>
+      <hr>
+      <p>Graphics:</p>
+      <ul>
+        {{#each graphics}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+      </ul>
+      <hr />
+      <h3>Ports: </h3>
+      <ul>
+        {{#each ports}}
+        <li>{{type}}</li>
+        <li>Count: {{count}}</li>
+
+        {{#if features}}
+        <li>Features: {{features}} </li>
+        {{/if}}
+        <br />
+        {{/each}}
+        <hr />
+      </ul>
+
+      <h3>Battery:</h3>
+      <ul>
+        {{#each battery}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+      </ul>
+      <hr />
+      <h4>Weight: </h4>
+      <p>{{weight}}</p>
+      <h4>Dimensions:</h4>
+      <ul>
+        {{#each dimensions}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+      </ul>
+      <hr />
+      <h4>OS: {{operating_system}}</h4>
+      <hr />
+      <h5>Accessories:</h5>
+      <ul>
+        {{#each accessories}}
+        <li>{{name}} - price: {{price}}</li>
+        {{/each}}
+      </ul>
+      {{/with}}
+    </section>
+  </main>
+</div>
