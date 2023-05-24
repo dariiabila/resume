@@ -1,0 +1,80 @@
+<div>
+  <section>
+    <main>
+      {{#with program}}
+      <h1>Excursion:</h1>
+      <div>
+        {{#with excursion}}
+        <p>Name: {{name}}</p>
+        <p>Location: {{location.city}}, {{location.country}}</p>
+        <p>Date: {{date}}</p>
+        <hr>
+        <div>
+          <hr />
+          {{#each program}}
+          <h2>Program: {{name}}</h2>
+
+          <p>Type: {{type}}
+            <br />
+            Duration: {{duration}}
+          </p>
+
+          <div>
+            {{#with details}}
+            <p><b>Address: </b>{{museum.name}}</p>
+
+            <ul>
+              {{#if museum}}
+              {{#with museum}}
+
+              <li>{{location.address}}, {{location.city}}, {{location.country}}</li>
+              <p><strong>Exhibits:</strong></p>
+              <ul>
+                {{#each exhibits}}
+                <li>Artist: {{#if artist}}{{artist}}{{else}}Unknown{{/if}}</li>
+                <p>{{description}}</p>
+                {{#if audio_guide}}
+                <p><em>Audio guide: Available</em></p>
+                {{/if}}
+                {{/each}}
+              </ul>
+              {{/with}}
+              {{/if}}
+            </ul>
+
+
+            <ul>
+              {{#if venue}}
+              {{#with venue}}
+
+              <li>{{location.address}}, {{location.city}}, {{location.country}}</li>
+              {{/with}}
+
+              <p><strong>Performers: </strong></p>
+
+              {{#each performers}}
+              <li>{{name}}, {{type}}</li>
+              {{/each}}
+
+              {{/if}}
+            </ul>
+
+            {{#with guide}}
+            <p><b>Guide: </b>{{name}}</p>
+            <p>Language: {{language}}</p>
+            <p>Rating: {{rating}}</p>
+            {{/with}}
+            <hr />
+            {{/with}}
+          </div>
+
+          {{/each}}
+
+        </div>
+
+        {{/with}}
+      </div>
+      {{/with}}
+    </main>
+  </section>
+</div>
