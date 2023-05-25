@@ -1,0 +1,23 @@
+<ul>
+    <li>ID:{{id}}</li>
+    <li>Name: {{name}}</li>
+    <li>Gender: {{gender}}</li>
+    <li>Age: {{age}}</li>
+
+    <br />
+    <div>
+        {{#if mutual_friends}}
+        <p><em>Mutual friends:</em></p>
+        <ul>
+            {{#each mutual_friends}}
+            <li>ID:{{id}}</li>
+            <li>Name: {{name}}</li>
+            <li>Gender: {{gender}}</li>
+            <li>Age: {{age}}</li>
+            <hr />
+        </ul>
+        {{/each}}
+        {{/if}}
+
+</ul>
+</div>

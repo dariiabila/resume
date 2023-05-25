@@ -1,0 +1,44 @@
+<div>
+  <main>
+    <h1>{{name}} users:</h1>
+    <div>
+      <ul>
+        {{#each users}}
+
+        <li><b>ID: </b>{{id}}</li>
+        <li>Name: {{name}}</li>
+        <li>age: {{age}}</li>
+
+        <br>
+      </ul>
+      <h2>Friends:</h2>
+      {{#each friends}}
+      {{>userinfo }}
+
+      <br>
+
+      <div>
+        <ul>
+          {{#each groups}}
+          <p><strong>Groups:</strong></p>
+          <li>ID: {{id}}</li>
+          <li>Name: {{name}}</li>
+          <dfn>{{description}}</dfn>
+
+          <div>
+            {{#each members}}
+            <p>Members: </p>
+
+            {{> userinfo id=id name=name gender=gender age=age}}
+            <br />
+            {{/each}}
+          </div>
+          {{/each}}
+          {{/each}}
+        </ul>
+        {{/each}}
+      </div>
+    </div>
+
+  </main>
+</div>
