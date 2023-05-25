@@ -736,4 +736,3 @@ router.get('/web', function (req, res) {
       ],
     },
   })
-})
