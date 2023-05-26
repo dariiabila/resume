@@ -1,14 +1,17 @@
 {{!-- <p>Тут ми створюємо карточку з інф та картинкою, як на розетці</p> --}}
 <main>
-  <div class="card">
-    <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
-    <div class="card-body">
-      <h5 class="card-title">Product #49394834</h5>
-      <p>USB xab type</p>
-      <a href="/mac" class="btn btn-primary">Open</a>
-    </div>
+  <div class="row gy-5">
+    <section class="col-5">
+      <div class="card text-bg-dark">
+        <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+        <div class="card-body">
+          <h5 class="card-title">Product #49394834</h5>
+          <p>USB xab type</p>
+          <a href="/mac" class="btn btn-primary">Open</a>
+        </div>
+      </div>
+    </section>
   </div>
-
   <br>
   <br>
   <br>
@@ -28,7 +31,7 @@
   {{!-- <p>Можемо створити меню для сайта</p> --}}
   <br>
   <br>
-  <h5>Menu</h5>
+  <h5>Menu1</h5>
 
   <ul class="list-group">
     <li class="list-group-item">
@@ -41,5 +44,209 @@
       <a href="#" class="btn btn-link">Home page</a>
     </li>
   </ul>
+  {{!-- <p>Щоб заголовок меню був всередині карточки</p> --}}
+
+  <br>
+  <br>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>Menu2</h5>
+    </div>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <a href="#" class="btn btn-link">Home page</a>
+      </li>
+      <li class="list-group-item">
+        <a href="#" class="btn btn-link">Summary page</a>
+      </li>
+    </ul>
+
+    <div class="card-footer">
+      <button class="btn btn-dark btn-sm">Update list</button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  {{!-- Tables - це компонент, який створює таблиці
+  <p> table клас для контейнера таблиці </p>
+
+  <p>table-striped додає смугастий стиль до таблиці</p>
+
+  <p> table-bordered додає рамку до таблиці та її елементів </p>--}}
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>#38</th>
+        <td>John</td>
+        <td>88</td>
+      </tr>
+
+      <tr>
+        <th>#33</th>
+        <td>Cat</td>
+        <td>13</td>
+      </tr>
+
+      <tr>
+        <th>#33</th>
+        <td>Cat</td>
+        <td>13</td>
+      </tr>
+
+      <tr>
+        <th>#33</th>
+        <td>Cat</td>
+        <td>13</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+
+  {{!--Background color - це додатковий class name, який дає можливість зафарбувати фон компонента
+  text-bg-primary визначає основний колір
+
+  text-bg-secondary визначає додатковий колір
+
+  text-bg-success визначає зелений (успішний) колір
+
+  text-bg-danger визначає червоний (небезпечний) колір
+
+  text-bg-warning визначає жовтий (попереджувальний) колір
+
+  text-bg-info визначає блакитний (інформаційний) колір
+
+  text-bg-light визначає світлий колір
+
+  text-bg-dark визначає темний колір--}}
+
+  <div class="card text-bg-success">
+    <div class="card-header text-center">Header</div>
+    <div class="card-body text-center">
+      <h6 class="card-title">This is title</h6>
+      <p>This is content of our box</p>
+      <button class="btn btn-light">Click!</button>
+    </div>
+    <div class="card-footer text-center">Footer</div>
+  </div>
+  {{!-- ============
+  Сітка - це підхід до верстки інтерфейсів,
+  в якому ми розділяємо наш контент на 12 колонок
+  --
+  row - визначає рядок стовпців у сітковій системі
+
+  сol-* - визначає ширину стовпців у системі сітки
+
+  замініть * на число від 1 до 12, щоб визначити
+  скільки стовпців має охоплювати ваш елемент.
+
+  Відступи:
+
+  g-* - визначає вертикальний та горизонтальний розрив
+
+  замініть * на число від 1 до 5, щоб визначити
+  на скільки великими мають бути відступи
+
+  gy-* - визначає вертикальний розрив
+
+  gx-* - визначає горизонтальний розрив
+  Пишемо в row
+  ============= --}}
+
+  <br>
+  <hr>
+
+  <div class="row gx-5 gy-1">
+    <div class="col-4">
+
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Header</div>
+        <div class="card-body text-center">
+          <h6 class="card-title">This is title</h6>
+          <p>This is content of our box</p>
+          <button class="btn btn-light">Click!</button>
+        </div>
+        <div class="card-footer text-center">Footer</div>
+      </div>
+    </div>
+
+    <div class="col-4">
+
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Header</div>
+        <div class="card-body text-center">
+          <h6 class="card-title">This is title</h6>
+          <p>This is content of our box</p>
+          <button class="btn btn-light">Click!</button>
+        </div>
+        <div class="card-footer text-center">Footer</div>
+      </div>
+    </div>
+
+    <div class="col-4">
+
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Header</div>
+        <div class="card-body text-center">
+          <h6 class="card-title">This is title</h6>
+          <p>This is content of our box</p>
+          <button class="btn btn-light">Click!</button>
+        </div>
+        <div class="card-footer text-center">Footer</div>
+      </div>
+    </div>
+
+    <div class="col-4">
+
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Header</div>
+        <div class="card-body text-center">
+          <h6 class="card-title">This is title</h6>
+          <p>This is content of our box</p>
+          <button class="btn btn-light">Click!</button>
+        </div>
+        <div class="card-footer text-center">Footer</div>
+      </div>
+    </div>
+
+    <div class="col-4">
+
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Header</div>
+        <div class="card-body text-center">
+          <h6 class="card-title">This is title</h6>
+          <p>This is content of our box</p>
+          <button class="btn btn-light">Click!</button>
+        </div>
+        <div class="card-footer text-center">Footer</div>
+      </div>
+    </div>
+
+    <div class="col-4">
+
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Header</div>
+        <div class="card-body text-center">
+          <h6 class="card-title">This is title</h6>
+          <p>This is content of our box</p>
+          <button class="btn btn-light">Click!</button>
+        </div>
+        <div class="card-footer text-center">Footer</div>
+      </div>
+    </div>
+
+  </div>
 
 </main>
