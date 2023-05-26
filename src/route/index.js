@@ -1232,4 +1232,14 @@ router.get('/task22', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 // Підключаємо роутер до бек-енду
+
+router.get('/bootstrap2', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap2', {
+    layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 module.exports = router
