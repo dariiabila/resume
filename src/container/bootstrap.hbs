@@ -1,4 +1,4 @@
-<main>
+<main class="p-5">
     <h1 class="text-center text-uppercase">Hello world</h1>
     <h2 class="text-end text-lowercase">Hello baby</h2>
     <h3 class="text-capitalize">bye bye baby</h3>
@@ -43,4 +43,142 @@
             This is content
         </div>
     </div>
+</main>
+<hr>
+<hr>
+{{!-- Урок 4 НАВІГАЦІЯ. ЗНАЧКИ ТА ПОВІДОМЛЕННЯ --}}
+
+{{!-- 1. Як зробити навігацію --}}
+{{!-- 2. <div class="nav flex-column"></div> - для вертикального відображення навігації
+---- 3. breadcrumb клас для контейнера
+breadcrumb-item клас для елемента
+4. Badge - це компонент, який вказує значок з контентом
+badge клас для контейнера
+
+rounded-pill робить заокруглення країв компонента
+--}}
+<main class="p-5">
+    <div class="row">
+        <div class="col-12 mb-5">
+            <div class="nav nav-tabs">
+                <div class="nav-item">
+                    <a href="#" class="nav-link active">Main</a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">Catalog</a>
+                </div>
+
+                <div class="nav-item ">
+                    <a href="#" class="nav-link ">Shop list</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-5 pe-5">
+            <div class="card">
+                <div class="card pt-4 pb-3 px-4">
+                    <div class="nav flex-column">
+                        <div class="nav-item mb-2">
+                            <div class="card">
+                                <a href="#" class="nav-link">Home page</a>
+                            </div>
+
+                        </div>
+
+                        <div class="nav-item mb-2">
+                            <div class="card">
+                                <a href="#" class="nav-link disabled">Bootsrap</a>
+                            </div>
+
+                        </div>
+
+                        <div class="nav-item ">
+                            <div class="card">
+                                <a href="#" class="nav-link ">FAQ page</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Home</a>
+                        </li>
+
+                        <li class="breadcrumb-item">
+                            <a href="#">PC та ноутбуки</a>
+                        </li>
+
+                        <li class="breadcrumb-item">
+                            MacBook
+                        </li>
+                    </ol>
+                </div>
+
+                {{!--
+
+                m-* визначає зовнішні відступи для всіх сторін
+
+                mt-* визначає зовнішні відступи для верхньої сторони (margin top)
+
+                mb-* визначає зовнішні відступи для нижньої сторони (margin button)
+
+                my-* визначає вертикальні зовнішні відступи
+
+                ms-* визначає зовнішні відступи для лівої сторони (margin start)
+
+                me-* визначає зовнішні відступи для правої сторони (margin end)
+
+                mx-* визначає горизонтальні зовнішні відступи
+
+                замініть * на число від 1 до 5, щоб визначити
+                на скільки великими мають бути відступи
+
+                ----Внутрішні відступи (padding)
+
+
+                p-* визначає внутрішні відступи для всіх сторін
+
+                pt-* визначає внутрішні відступи для верхньої сторони
+
+                pb-* визначає внутрішні відступи для нижньої сторони
+
+                py-* визначає вертикальні внутрішні відступи
+
+                ps-* визначає внутрішні відступи для лівої сторони
+
+                pe-* визначає внутрішні відступи для правої сторони
+
+                px-* визначає горизонтальні внутрішні відступи
+
+                замініть * на число від 1 до 5, щоб визначити
+                на скільки великими мають бути відступи
+
+                --}}
+                <div class="col-12">
+
+                    <button class="btn btn-primary rounded-pill mb-3">Click on me!</button>
+
+                    <div class="alert alert-dark">
+                        <h6 class="mb-2"> Hello world <span
+                                class="badge text-bg-warning text-uppercase rounded-pill">Топ
+                                продаж</span>
+                        </h6>
+                        <p class="m-0">This is info</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
 </main>
