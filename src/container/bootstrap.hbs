@@ -1,48 +1,48 @@
 <main class="p-5">
-    <h1 class="text-center text-uppercase">Hello world</h1>
-    <h2 class="text-end text-lowercase">Hello baby</h2>
-    <h3 class="text-capitalize">bye bye baby</h3>
-    <hr />
-    <div class="display-1">Hello world</div>
-    <div class="display-2 text-muted"> Hello baby</div>
-    <div class="display-3">bye bye baby</div>
+  <h1 class="text-center text-uppercase">Hello world</h1>
+  <h2 class="text-end text-lowercase">Hello baby</h2>
+  <h3 class="text-capitalize">bye bye baby</h3>
+  <hr />
+  <div class="display-1">Hello world</div>
+  <div class="display-2 text-muted"> Hello baby</div>
+  <div class="display-3">bye bye baby</div>
 
-    <hr />
+  <hr />
 
-    <div class="text-muted text-end">
-        Additional text
+  <div class="text-muted text-end">
+    Additional text
+  </div>
+
+  <hr />
+
+  <a href="#" class="btn btn-success">
+    Button primary
+  </a>
+
+  <hr />
+
+  <p class="">My text</p>
+  <p class="text-dark">My text</p>
+  <p class="text-muted">My text</p>
+
+  <hr />
+
+  <div class="card">
+    <div class="card-body">
+      <button class="btn btn-secondary btn-lg">Add</button>
+      <button class="btn btn-outline-secondary">Edit</button>
+      <button class="btn btn-outline-danger btn-sm">Delete</button>
     </div>
+  </div>
 
-    <hr />
-
-    <a href="#" class="btn btn-success">
-        Button primary
-    </a>
-
-    <hr />
-
-    <p class="">My text</p>
-    <p class="text-dark">My text</p>
-    <p class="text-muted">My text</p>
-
-    <hr />
-
-    <div class="card">
-        <div class="card-body">
-            <button class="btn btn-secondary btn-lg">Add</button>
-            <button class="btn btn-outline-secondary">Edit</button>
-            <button class="btn btn-outline-danger btn-sm">Delete</button>
-        </div>
+  <br>
+  <br>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      This is content
     </div>
-
-    <br>
-    <br>
-    <br>
-    <div class="card">
-        <div class="card-body">
-            This is content
-        </div>
-    </div>
+  </div>
 </main>
 <hr>
 <hr>
@@ -58,127 +58,254 @@ badge клас для контейнера
 rounded-pill робить заокруглення країв компонента
 --}}
 <main class="p-5">
-    <div class="row">
-        <div class="col-12 mb-5">
-            <div class="nav nav-tabs">
-                <div class="nav-item">
-                    <a href="#" class="nav-link active">Main</a>
-                </div>
-
-                <div class="nav-item">
-                    <a href="#" class="nav-link disabled">Catalog</a>
-                </div>
-
-                <div class="nav-item ">
-                    <a href="#" class="nav-link ">Shop list</a>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-12 mb-5">
+      <div class="nav nav-tabs">
+        <div class="nav-item">
+          <a href="#" class="nav-link active">Main</a>
         </div>
 
-        <div class="col-5 pe-5">
-            <div class="card">
-                <div class="card pt-4 pb-3 px-4">
-                    <div class="nav flex-column">
-                        <div class="nav-item mb-2">
-                            <div class="card">
-                                <a href="#" class="nav-link">Home page</a>
-                            </div>
-
-                        </div>
-
-                        <div class="nav-item mb-2">
-                            <div class="card">
-                                <a href="#" class="nav-link disabled">Bootsrap</a>
-                            </div>
-
-                        </div>
-
-                        <div class="nav-item ">
-                            <div class="card">
-                                <a href="#" class="nav-link ">FAQ page</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="nav-item">
+          <a href="#" class="nav-link disabled">Catalog</a>
         </div>
 
-        <div class="col-7">
-            <div class="row">
-                <div class="col-12">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="#">Home</a>
-                        </li>
-
-                        <li class="breadcrumb-item">
-                            <a href="#">PC та ноутбуки</a>
-                        </li>
-
-                        <li class="breadcrumb-item">
-                            MacBook
-                        </li>
-                    </ol>
-                </div>
-
-                {{!--
-
-                m-* визначає зовнішні відступи для всіх сторін
-
-                mt-* визначає зовнішні відступи для верхньої сторони (margin top)
-
-                mb-* визначає зовнішні відступи для нижньої сторони (margin button)
-
-                my-* визначає вертикальні зовнішні відступи
-
-                ms-* визначає зовнішні відступи для лівої сторони (margin start)
-
-                me-* визначає зовнішні відступи для правої сторони (margin end)
-
-                mx-* визначає горизонтальні зовнішні відступи
-
-                замініть * на число від 1 до 5, щоб визначити
-                на скільки великими мають бути відступи
-
-                ----Внутрішні відступи (padding)
-
-
-                p-* визначає внутрішні відступи для всіх сторін
-
-                pt-* визначає внутрішні відступи для верхньої сторони
-
-                pb-* визначає внутрішні відступи для нижньої сторони
-
-                py-* визначає вертикальні внутрішні відступи
-
-                ps-* визначає внутрішні відступи для лівої сторони
-
-                pe-* визначає внутрішні відступи для правої сторони
-
-                px-* визначає горизонтальні внутрішні відступи
-
-                замініть * на число від 1 до 5, щоб визначити
-                на скільки великими мають бути відступи
-
-                --}}
-                <div class="col-12">
-
-                    <button class="btn btn-primary rounded-pill mb-3">Click on me!</button>
-
-                    <div class="alert alert-dark">
-                        <h6 class="mb-2"> Hello world <span
-                                class="badge text-bg-warning text-uppercase rounded-pill">Топ
-                                продаж</span>
-                        </h6>
-                        <p class="m-0">This is info</p>
-
-                    </div>
-                </div>
-            </div>
+        <div class="nav-item ">
+          <a href="#" class="nav-link ">Shop list</a>
         </div>
-
+      </div>
     </div>
+
+    <div class="col-5 pe-5">
+      <div class="card">
+        <div class="card pt-4 pb-3 px-4">
+          <div class="nav flex-column">
+            <div class="nav-item mb-2">
+              <div class="card">
+                <a href="#" class="nav-link">Home page</a>
+              </div>
+
+            </div>
+
+            <div class="nav-item mb-2">
+              <div class="card">
+                <a href="#" class="nav-link disabled">Bootsrap</a>
+              </div>
+
+            </div>
+
+            <div class="nav-item ">
+              <div class="card">
+                <a href="#" class="nav-link ">FAQ page</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-7">
+      <div class="row">
+        <div class="col-12">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a>
+            </li>
+
+            <li class="breadcrumb-item">
+              <a href="#">PC та ноутбуки</a>
+            </li>
+
+            <li class="breadcrumb-item">
+              MacBook
+            </li>
+          </ol>
+        </div>
+
+        {{!--
+
+        m-* визначає зовнішні відступи для всіх сторін
+
+        mt-* визначає зовнішні відступи для верхньої сторони (margin top)
+
+        mb-* визначає зовнішні відступи для нижньої сторони (margin button)
+
+        my-* визначає вертикальні зовнішні відступи
+
+        ms-* визначає зовнішні відступи для лівої сторони (margin start)
+
+        me-* визначає зовнішні відступи для правої сторони (margin end)
+
+        mx-* визначає горизонтальні зовнішні відступи
+
+        замініть * на число від 1 до 5, щоб визначити
+        на скільки великими мають бути відступи
+
+        ----Внутрішні відступи (padding)
+
+
+        p-* визначає внутрішні відступи для всіх сторін
+
+        pt-* визначає внутрішні відступи для верхньої сторони
+
+        pb-* визначає внутрішні відступи для нижньої сторони
+
+        py-* визначає вертикальні внутрішні відступи
+
+        ps-* визначає внутрішні відступи для лівої сторони
+
+        pe-* визначає внутрішні відступи для правої сторони
+
+        px-* визначає горизонтальні внутрішні відступи
+
+        замініть * на число від 1 до 5, щоб визначити
+        на скільки великими мають бути відступи
+
+        --}}
+        <div class="col-12">
+
+          <button class="btn btn-primary rounded-pill mb-3">Click on me!</button>
+
+          <div class="alert alert-dark">
+            <h6 class="mb-2"> Hello world <span class="badge text-bg-warning text-uppercase rounded-pill">Топ
+                продаж</span>
+            </h6>
+            <p class="m-0">This is info</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <hr class="my-5">
+  {{!-- =============== Урок ФОРМИ ===================== --}}
+  <h1 class="mb-5 text-center">ФОРМИ ТА ПОЛЯ</h1>
+
+  {{!-- Text field - це компонент, який створює текстове поле,
+  яке складається із заголовка, самого поля та підказки
+
+  form-label клас для <label>
+
+    form-control клас для <input>, який контролює поле
+
+    form-text клас для тексту-підказки
+
+    form-control-lg задає великий розмір для <input>
+
+    form-control-sm задає маленький розмір для <input> --}}
+
+    <div class="row g-5">
+
+      <div class="col-12">
+        <label class="form-label">Email address</label>
+        <input class="form-control">
+        <div class="form-text text-danger">Error, you need to set correct email</div>
+      </div>
+
+      <div class="col-12">
+        <div class="row">
+          <div class="col-2 pt-1">
+            <label class="form-label">Email address</label>
+          </div>
+
+          <div class="col-6">
+            <input class="form-control">
+          </div>
+
+          <div class="col-4 ps-5 pt-1">
+            <div class="form-text text-danger">Error, you need to set correct email</div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div>
+        <hr>
+      </div>
+
+      {{!-- Select field - це компонент, який створює розкривний список
+      form-select клас для <select>, який контролює поле
+        form-select-lg задає великий розмір для <select>
+          form-select-sm задає маленький розмір для <select> --}}
+
+            <div class="col-12">
+              <label class="form-label">Select role</label>
+              <select class="form-select form-select-lg">
+                <option selected>Open list</option>
+                <option value="1">Admin</option>
+                <option value="2">User</option>
+              </select>
+              <div class="form-text text-danger">Error, you need to set correct email</div>
+            </div>
+            <div>
+              <hr>
+            </div>
+
+            {{!-- Check field - це компонент, який дозволяє створити
+            список опцій, в якому можна обрати будь-яку кількість опцій
+            form-check клас для контейнера поля-прапорця
+
+            form-check-input клас для <input>, який має type="checkbox"
+
+            form-check-label клас для <label> --}}
+
+              <div class="col-12">
+                <div class="form-label">Select food</div>
+                <div class="form-check">
+                  <label class="form-check-label">Apple</label>
+                  <input name="food" type="checkbox" class="form-check-input">
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">Orange</label>
+                  <input name="food" type="checkbox" class="form-check-input">
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">Banana</label>
+                  <input type="checkbox" class="form-check-input">
+                </div>
+              </div>
+
+              {{!-- Radio field - це компонент, який дозволяє створити
+              список опцій, в якому можна обрати лише одну опцію
+              form-check клас для контейнера поля-перемикача
+
+              form-check-input клас для <input>, який має type="radio"
+
+              form-check-label клас для <label> --}}
+
+                <div class="col-12">
+                  <div class="form-label">Select food</div>
+                  <div class="form-check">
+                    <label class="form-check-label">Apple</label>
+                    <input name="food" type="radio" class="form-check-input">
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">Orange</label>
+                    <input name="food" type="radio" class="form-check-input">
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">Banana</label>
+                    <input name="food" type="radio" class="form-check-input">
+                  </div>
+                </div>
+
+                {{!-- Switch field - це компонент, який створює поле-перемикач,
+                який надає можливість включати та вимикати поле
+                form-switch - клас для контейнера поля перемикача,
+                який вказується разом з класом form-check
+
+                перемикач працює з <input type="checkbox"> --}}
+
+                <div class="col-12">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label">Get bonus</label>
+                    <input name="food" type="checkbox" class="form-check-input">
+                  </div>
+                </div>
+    </div>
+
 
 
 </main>
