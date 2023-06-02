@@ -251,23 +251,23 @@
             {{/with}}
 
 
-            <label class="form-label">{{your_expirience.label}}</label>
+            <label class="form-label mt-3">{{your_expirience.label}}</label>
             <input class="form-control" type="text">
 
-            <div>
+            <div class="my-3">
               {{#with purchase_frequency}}
-              <div class=>{{label}}</div>
+              <div class="mb-3">{{label}}</div>
               <select class="form-select">
                 <option selected>{{placeholder}}</option>
                 {{#each options}}
                 <option value="{{value}}">{{text}}</option>
                 {{/each}}
-                {{/with}}
+              </select>
+              {{/with}}
 
             </div>
-            <div>TEST</div>
-            <div>
-              <p>НІЧОГО НЕ ВИВОДИТЬСЯ</p>
+
+            <div class="my-3">
               {{#with factors}}
               <label class="form-label">{{title}}</label>
               {{#each options}}
@@ -280,26 +280,31 @@
               {{/each}}
               {{/with}}
             </div>
-            оололол
 
             {{/with}}
           </div>
-
         </div>
-
-
-
-
-
-
-
-
       </div>
     </section>
 
-
-
-
+    <hr class="my-5">
+    <div class="footer">
+      <div class="row">
+        {{#each footer}}
+        <div class="col-2">
+          <div class="nav">
+            <div class="col-2">
+              <div class="nav-item">
+                {{#each this}}
+                <a href="link" class="nav-link active {{#if @last}} disabled {{/if}}">{{text}}</a>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
 
   </div>
 </main>
