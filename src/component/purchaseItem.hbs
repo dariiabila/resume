@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-3 mt-4">
+
+        <div class="mb-3">{{number}}</div>
+        <h6>{{status}}</h6>
+    </div>
+
+    <div class="col-2 mt-4">
+        {{#with amount}}
+        <div class="mb-3">{{title}}</div>
+        <h6>{{value}}</h6>
+        {{/with}}
+    </div>
+
+    <div class="col-5 my-3">
+        {{#each images}}
+        <img src="{{this}}" class="img-fluid rounded">
+        {{/each}}
+    </div>
+
+    <div class="col-2 my-5">
+        {{#with button}}
+        <a href="{{link}}" class="btn {{#if isPrimary}} btn-primary{{/if}} ">{{text}}</a>
+        {{/with}}
+    </div>
+    <hr>
+</div>
