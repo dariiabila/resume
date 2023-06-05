@@ -1,0 +1,41 @@
+<div class="col-6">
+    <div class="card my-3">
+        <div class="card-body">
+            <img src="{{img}}" class="card-img-top">
+
+            {{#if isHot}}
+            <span class="badge text-bg-warning text-uppercase text-light rounded-pill mt-2">
+                Hot</span>
+            {{/if}}
+
+            {{#if isNew}}
+            <span class="badge text-bg-primary text-uppercase text-light rounded-pill mt-2">
+                New</span>
+            {{/if}}
+
+
+
+            <h5 class="my-3">{{name}}</h5>
+            {{#with review}}
+            <div class="mt-2 mb-3">{{amount}} {{text}}</div>
+            {{/with}}
+            <strong>
+                <p class=" mb-2">{{price}}</p>
+            </strong>
+            <div>{{delivery}}</div>
+
+            {{#each buttons}}
+            <a href="{{link}}"
+                class="btn {{#if isPrimary}} btn-primary{{/if}} {{#if isSecondary}} btn-secondary {{/if}} my-1 mt-2">{{text}}</a>
+            {{/each}}
+
+            <ul class="mt-3">
+                {{#each characteristics}}
+                <li class="me-3">{{title}}: {{value}}</li>
+                {{/each}}
+            </ul>
+
+
+        </div>
+    </div>
+</div>
