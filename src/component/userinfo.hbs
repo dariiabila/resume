@@ -1,23 +1,32 @@
-<ul>
-    <li>ID:{{id}}</li>
-    <li>Name: {{name}}</li>
-    <li>Gender: {{gender}}</li>
-    <li>Age: {{age}}</li>
-
-    <br />
-    <div>
-        {{#if mutual_friends}}
-        <p><em>Mutual friends:</em></p>
+<div class="row">
+  <div class="col-6">
+    <div class="card text-bg-light">
+      <div class="card-body">
         <ul>
-            {{#each mutual_friends}}
-            <li>ID:{{id}}</li>
-            <li>Name: {{name}}</li>
-            <li>Gender: {{gender}}</li>
-            <li>Age: {{age}}</li>
-            <hr />
-        </ul>
-        {{/each}}
-        {{/if}}
+          <li>ID:{{id}}</li>
+          <li>Name: {{name}}</li>
+          <li>Gender: {{gender}}</li>
+          <li>Age: {{age}}</li>
+      </div>
+    </div>
+  </div>
 
-</ul>
+  <div class="my-4 col-4">
+
+
+    {{#if mutual_friends}}
+    <p><em>Mutual friends:</em></p>
+    <ul>
+      {{#each mutual_friends}}
+      <li>ID:{{id}}</li>
+      <li>Name: {{name}}</li>
+      <li>Gender: {{gender}}</li>
+      <li>Age: {{age}}</li>
+    </ul>
+    {{/each}}
+    {{/if}}
+
+
+  </div>
+  </ul>
 </div>

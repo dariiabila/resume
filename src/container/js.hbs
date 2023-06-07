@@ -1,83 +1,138 @@
-<div>
-  <main>
-    <h1>{{name}}</h1>
-    <dfn>{{description}}</dfn>
-    <br>
+<main>
+  <div class="row">
+    <h1 class="text-center">{{name}}</h1>
+    <dfn class="my-3">{{description}}</dfn>
+
     <hr>
-    <h2>History</h2>
+    <h2 class="text-center">History</h2>
     {{#with history}}
     <p>Year: {{year}}</p>
     <p>Founder: {{founder}}</p>
     {{/with}}
-    <h3>Types</h3>
-    <ul>
-      {{#each types}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
-    <hr>
-    <h3>Syntax:</h3>
-    {{#with syntax}}
-    <p>Variables:</p>
-    <ul>
-      {{#each variables}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
-    <p>Functions:</p>
-    <ul>
-      {{#each functions}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
-    <p>Conditionals:</p>
-    <ul>
-      {{#each conditionals}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
-    <p>Loops:</p>
-    <ul>
-      {{#each loops}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
-    <p>Classes:</p>
-    <ul>
-      {{#each classes}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
-    {{/with}}
-    <hr>
-    <h3>Features</h3>
-    <ol>
-      {{#each features}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ol>
+
+    <hr class="my-3">
+
+    <div class="card col-4 mb-4">
+      <div class="card-body">
+        <h3>Types</h3>
+
+        <ul>
+          {{#each types}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
     <hr>
 
-    <h3>Libraries: </h3>
-    <ul>
-      {{#each libraries}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
+    <h3 class="text-center">Syntax:</h3>
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          {{#with syntax}}
+
+          <div class="card col-5 ms-3 mt-4">
+            <div class="card-body">
+              <p class="text-center"><strong>Variables:</strong></p>
+              <ul>
+                {{#each variables}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+
+          <div class="card col-5 ms-3 mt-4">
+            <div class="card-body">
+              <p class="text-center"> <strong>Functions:</strong></p>
+              <ul>
+                {{#each functions}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+
+          <div class="card col-5 ms-3 mt-4">
+            <div class="card-body">
+              <p class="text-center"><strong>Conditionals</strong></p>
+              <ul>
+                {{#each conditionals}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+
+          <div class="card col-5 ms-3 mt-4">
+            <div class="card-body">
+              <p class="text-center"><strong>Loops</strong></p>
+              <ul>
+                {{#each loops}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+
+          <div class="card col-5 ms-3 mt-4">
+            <div class="card-boy">
+              <p><strong>Classes:</strong> </p>
+              <ul>
+                {{#each classes}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+          {{/with}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-4">
+        <h3 class="text-center">Features</h3>
+        <ol>
+          {{#each features}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="col-4">
+        <h3 class="text-center">Libraries: </h3>
+        <ul>
+          {{#each libraries}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="col-4">
+        <h3>Tools:</h3>
+        <ul>
+          {{#each tools}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
     <hr>
-    <h3>Tools:</h3>
-    <ul>
-      {{#each tools}}
-      <li>{{this}}</li>
-      {{/each}}
-    </ul>
-    <hr>
-    <h4>Community: </h4>
-    <ul>
+
+
+    <div class="card text-bg-dark">
+      <div class="card-header text-center">
+        <h4>Community: </h4>
+      </div>
+
       {{#each community}}
-      <li>{{name}}, {{type}}</li>
-      {{/each}}
-    </ul>
+      <a href="#" class="btn btn-outline-light my-2">{{name}}, {{type}}</li>
+        {{/each}}
 
-  </main>
-</div>
+    </div>
+
+  </div>
+</main>

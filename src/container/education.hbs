@@ -1,36 +1,30 @@
-{{!--
-Це код container файлу для education сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
---}}
+{{#with main}}
+<main>
+  <section>
+    {{> title data="My Education" big=true}}
+    <ul class="ps-3">
+      {{#each education}}
+      <li>{{name}}
+        {{#if isEnd}} {{/if}}
 
-<div>
-    {{#with main}}
-    <main>
-        <section>
-            {{> title data="My Education" big=true}}
-            <ul class="ps-5">
-                {{#each education}}
-                <li>{{name}}
-                    {{#if isEnd}} {{/if}}
+        {{#unless isEnd}} (ще в процесі) {{/unless}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  <section>
+    {{> title data="My certificates"}}
+    {{#each certificates}}
+    <ul class="ps-3">
+      <li>
+        {{name}} ({{id}})</li>
+      </li>
+    </ul>
+    {{/each}}
+  </section>
+</main>
+{{/with}}
 
-                    {{#unless isEnd}} (ще в процесі) {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
-        </section>
-        <section>
-            {{> title data="My certificates"}}
-            {{#each certificates}}
-            <ul class="ps-5">
-                <li>
-                    {{name}} ({{id}})</li>
-                </li>
-            </ul>
-            {{/each}}
-        </section>
-    </main>
-    {{/with}}
-</div>
 
 
 {{!--
