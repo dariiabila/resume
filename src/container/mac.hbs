@@ -1,87 +1,118 @@
-<div>
-  <main>
-    <h1>{{name}}</h1>
+<main>
+  <div class="row">
+    <h1 class="my-4 text-center">{{name}}</h1>
     <dfn>{{description}}</dfn>
     <p><strong>Price:</strong> {{price}}</p>
     <p>Category: {{category}}</p>
     <hr>
     <section>
-      <h2>Features:</h2>
+      <h2 class="text-center mb-4">Features:</h2>
       {{#with features}}
-      <p>Processor:</p>
-      <ul>
-        {{#each processor}}
-        <li>{{@key}}: {{this}}</li>
-        {{/each}}
-      </ul>
-      <hr>
-      <p>Memory:</p>
-      <ul>
-        {{#each memory}}
-        <li>{{@key}}: {{this}}</li>
-        {{/each}}
-      </ul>
-      <hr>
-      <p>Storage:</p>
-      <ul>
-        {{#each storage}}
-        <li>{{@key}}: {{this}}</li>
-        {{/each}}
-      </ul>
-      <hr>
-      <p>Display:</p>
-      <ul>
-        {{#each display}}
-        <li>{{@key}}: {{this}}</li>
-        {{/each}}
-      </ul>
-      <hr>
-      <p>Graphics:</p>
-      <ul>
-        {{#each graphics}}
-        <li>{{@key}}: {{this}}</li>
-        {{/each}}
-      </ul>
-      <hr />
-      <h3>Ports: </h3>
-      <ul>
-        {{#each ports}}
-        <li>{{type}}</li>
-        <li>Count: {{count}}</li>
 
-        {{#if features}}
-        <li>Features: {{features}} </li>
-        {{/if}}
-        <br />
-        {{/each}}
-        <hr />
-      </ul>
+      <div class="row">
+        <div class="col-6">
+          <ul class="list-group">
+            <li class="list-group-item active text-bg-dark">
+              <p class="h3">Processor:</p>
+            </li>
+            {{#each processor}}
+            <li class="list-group-item">{{@key}}: {{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
 
-      <h3>Battery:</h3>
-      <ul>
-        {{#each battery}}
-        <li>{{@key}}: {{this}}</li>
-        {{/each}}
-      </ul>
-      <hr />
-      <h4>Weight: </h4>
-      <p>{{weight}}</p>
-      <h4>Dimensions:</h4>
-      <ul>
-        {{#each dimensions}}
-        <li>{{@key}}: {{this}}</li>
-        {{/each}}
-      </ul>
-      <hr />
-      <h4>OS: {{operating_system}}</h4>
-      <hr />
-      <h5>Accessories:</h5>
+        <div class="col-5">
+          <p class="text-center text-muted">Memory:</p>
+          <ul>
+            {{#each memory}}
+            <li class="text-muted">{{@key}}: {{this}}</li>
+            {{/each}}
+          </ul>
+          <hr>
+          <p class="text-center text-muted">Storage:</p>
+          <ul>
+            {{#each storage}}
+            <li class="text-muted">{{@key}}: {{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <div class="row">
+        <div class="col-6">
+
+          <ul class="list-group">
+            <li class="list-group-item active text-bg-dark">
+              <p class="h3">Display:</p>
+            </li>
+            {{#each display}}
+            <li class="list-group-item">{{@key}}: {{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div class="col-5">
+          <p class="text-center text-muted my-4">Graphics:</p>
+          <ul>
+            {{#each graphics}}
+            <li class="text-muted">{{@key}}: {{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
+      <div class="card mt-5">
+        <div class="card-body">
+          <h3 class="mb-3">Ports: </h3>
+          <ul>
+            {{#each ports}}
+            <li>{{type}}</li>
+            <li>Count: {{count}}</li>
+
+            {{#if features}}
+            <li>Features: {{features}} </li>
+            {{/if}}
+
+            {{/each}}
+          </ul>
+
+          <h3>Battery:</h3>
+          <ul>
+            {{#each battery}}
+            <li>{{@key}}: {{this}}</li>
+            {{/each}}
+          </ul>
+          <hr />
+          <h4>Weight: </h4>
+          <p>{{weight}}</p>
+          <h4>Dimensions:</h4>
+          <ul>
+            {{#each dimensions}}
+            <li>{{@key}}: {{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
+      <div class="card text-bg-dark my-4">
+        <div class="card-body ">
+          <h4 class="text-center">OS: {{operating_system}}</h4>
+        </div>
+      </div>
+
+      <h5 class="text-center my-4">Accessories:</h5>
       <ul>
         {{#each accessories}}
         <li>{{name}} - price: {{price}}</li>
         {{/each}}
       </ul>
       {{/with}}
+
+      <div class="col-11 text-center">
+        <a href="#" class="btn btn-outline-dark btn-lg">Buy</a>
+      </div>
     </section>
-  </main>
-</div>
+  </div>
+</main>

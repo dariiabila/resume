@@ -1,101 +1,130 @@
-<div>
-    <main>
-        <div>
-            <h1>{{name}}</h1>
-            <p><b>Birth: </b>{{birthdate}} {{birthplace}}</p>
-            <p><b>Death: </b> {{deathdate}} {{deathplace}}</p>
-            <p>Nationality: {{nationality}}</p>
-            <p>Occupation: {{occupation}}</p>
+<main>
+  <div class="row">
+
+    <h1 class="text-center mb-4">{{name}}</h1>
+    <div class="card text-bg-light">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <p class="mt-3"><b>Birth: </b>{{birthdate}} {{birthplace}}</p>
+            <p class="my-4"><b>Death: </b> {{deathdate}} {{deathplace}}</p>
+            <p><b>Nationality:</b>{{nationality}}</p>
+            <p class="mt-4"><b>Occupation: </b>{{occupation}}</p>
+          </div>
+          <div class="col-6">
+            <img
+              src="https://images.unsplash.com/photo-1641893588018-b958a5845cab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              width="350" height="250" class="ms-5 text-end">
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div>
-            <h3>Known for:</h3>
 
-            <ul>
-                {{#each known_for}}
-                <li>{{this}}</li>
-                {{/each}}
-            </ul>
 
+    <div class="col-6">
+      <h3 class="mt-5 mb-4 text-center">Known for:</h3>
+
+      <ul class="list-group">
+        {{#each known_for}}
+        <li class="list-group-item text-center">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-6 text-center mt-5">
+      <h3>Education:</h3>
+      <ul class="list-group mt-4">
+        {{#each education}}
+        <li class="list-group-item text-center">Degree: {{degree}}</li>
+        <li class="list-group-item text-center">Field: {{field}}</li>
+        <li class="list-group-item text-center">Institution: {{institution}}</li>
+        <li class="list-group-item text-center">Year: {{year}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="mt-5 text-center mb-3">Notable publications</h4>
+
+      <ul>
+        {{#each notable_publications}}
+        <li><a href="https://en.wikipedia.org/wiki/Albert_Einstein#Publications" class="link-info">{{title}}</a>,
+          {{year}}, {{publisher}}</li>
+
+        {{/each}}
+      </ul>
+    </div>
+
+    <hr class="my-3">
+
+    <div>
+      <h4 class="mt-4 mb-3">Partners:</h4>
+
+      <ul>
+        {{#each partners}}
+        <li>{{name}} {{relationship}} </li>
+        <li>{{years}}</li>
+        {{/each}}
+      </ul>
+
+    </div>
+    <hr>
+
+    <div class="border border-info mt-4">
+      <h4 class="text-center my-3">Awards: </h4>
+      {{#each awards}}
+      <p class="mt-3">{{title}}, {{year}}</p>
+      <cite class="mb-5">{{description}}</cite>
+      {{/each}}
+    </div>
+
+    <div>
+      <h4 class="mt-3">Influenced: </h4>
+
+      <ul>
+        {{#each influenced}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
+    </div>
+
+    <div>
+      <h5 class="my-3">Quotes:</h5>
+
+      <ul>
+        {{#each quotes}}
+        <li>
+          <blockquote class="blockquote text-sm"><em>{{this}}</em></cite>
+        </li>
+        {{/each}}
+      </ul>
+
+    </div>
+    <hr class="my-4">
+
+    <div>
+
+      <div class="card">
+        <div class="card-header">
+          <p class="text-center h5"><strong>Major discoveries: </strong></p>
         </div>
+        <div class="card-body">
+          {{#each major_discoveries}}
+          <p><b>"{{title}}"</b>, {{year}}</p>
+          <cite>{{description}}</cite>
+          {{/each}}
 
-        <div>
-            <h3>Education:</h3>
-            {{#each education}}
-            <p>Degree: {{degree}}</p>
-            <p>Field: {{field}}</p>
-            <p>Institution: {{institution}}</p>
-            <p>Year: {{year}}</p>
-            {{/each}}
+          <p class="h5 mt-4 text-center"><strong>Contributions: </strong></p>
+          {{#with contributions}}
+          <p><b>"{{title}}"</b></p>
+          <cite>{{description}}</cite>
+          <p class="my-3"><b>Year: </b>{{year}}</p>
+          <p><b>Field:</b> {{field}}</p>
+          {{/with}}
         </div>
-        <div>
-            <h4>Notable publications</h4>
-
-            <ul>
-                {{#each notable_publications}}
-                <li>{{title}}, {{year}}, {{publisher}}</li>
-                {{/each}}
-            </ul>
-
-        </div>
-
-        <div>
-            <h4>Partners:</h4>
-
-            <ul>
-                {{#each partners}}
-                <li>{{name}} {{relationship}} </li>
-                <li>{{years}}</li>
-                {{/each}}
-            </ul>
-
-        </div>
-        <hr>
-        <div>
-            <h4>Awards: </h4>
-            {{#each awards}}
-            <p>{{title}}, {{year}}</p>
-            <cite>{{description}}</cite>
-            {{/each}}
-        </div>
-        <div>
-            <h4>Influenced: </h4>
-
-            <ul>
-                {{#each influenced}}
-                <li>{{this}}</li>
-                {{/each}}
-            </ul>
-
-        </div>
-        <div>
-            <p><b>Quotes:</b></p>
-
-            <ul>
-                {{#each quotes}}
-                <li>
-                    <cite><em>{{this}}</em></cite>
-                </li>
-                {{/each}}
-            </ul>
-
-        </div>
-        <hr>
-        <div>
-            <p><strong>Major discoveries: </strong></p>
-            {{#each major_discoveries}}
-            <p>{{title}}, {{year}}</p>
-            <cite>{{description}}</cite>
-            {{/each}}
-        </div>
-        <div>
-            <p><strong>Contributions: </strong></p>
-            {{#with contributions}}
-            <p><b>Title: {{title}}</b></p>
-            <cite>{{description}}</cite>
-            <p><b>Year: </b>{{year}}</p>
-            <p><b>Field:</b> {{field}}</p>
-            {{/with}}
-        </div>
-    </main>
-</div>
+      </div>
+    </div>
+  </div>
+</main>
